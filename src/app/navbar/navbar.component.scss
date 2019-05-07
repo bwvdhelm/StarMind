@@ -1,0 +1,45 @@
+.wrapper {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+    height: 64px;
+    max-width: 1080px;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+        opacity: 0.8;
+        display: flex;
+        text-decoration: none;
+        color: white;
+
+        &-text {
+            margin: auto 0;
+            margin-left: 12px;
+        }
+    
+        &-img {
+            height: 50px;
+            margin: auto 0;
+        }
+    }
+
+    &-list {
+        display: flex;
+        list-style-type: none;
+        
+        &__item {
+            font-weight: 200;
+            opacity: 0.8;
+            font-size: 0.8em;
+            margin: auto 12px;
+            text-decoration: none;
+            color: white;
+        }
+    }
+}

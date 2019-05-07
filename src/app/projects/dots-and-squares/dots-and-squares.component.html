@@ -1,0 +1,8 @@
+<div class="wrapper">
+  <h1 class="dots-and-squares-header">Dot and Squares</h1>
+  <table class="game-board">
+    <tr *ngFor="let row of gameBoardSize">
+      <td *ngFor="let cell of gameBoardSize" (click)="logEvent($event, cell)"></td>
+    </tr>
+  </table>
+</div>
