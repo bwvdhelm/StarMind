@@ -1,24 +1,83 @@
+* {
+  z-index: 1;
+}
+
 .wrapper {
-    background-image: linear-gradient(#1a001a, #000033);
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  background-image: linear-gradient(#1a001a, #000033);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
 }
 
 .dots-and-squares {
 
-    &-header {
-        margin-top: 0;
+  &-container {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+  }
+
+  &-table {
+    display: table;
+  }
+
+  &-row {
+    display: table-row;
+  }
+
+  &-cell {
+    height: 50px;
+    width: 50px;
+    border: 8px solid #002E61;
+    display: table-cell;
+  }
+}
+
+.player-information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.left {
+  border-left-color: #0084A3;
+}
+
+.right {
+    border-right-color: #0084A3;
+}
+
+.top {
+    border-top-color: #0084A3;
+}
+
+.bottom {
+    border-bottom-color: #0084A3;
+}
+
+.player1 {
+    background-color: rgba(159, 54, 87, 0.7);
+
+    &--header {
+      color: #A03759;
     }
 }
 
-.game-board {
-    border-collapse: collapse;
-     td {
-         border: 3px solid white;
-         height: 50px;
-         width: 50px;
-     }
+.player2 {
+    background-color: rgba(249, 174, 83, 0.6);
+
+    &--header {
+      color: #F9AE53;
+    }
+}
+
+.count {
+  font-size: 2em;
 }

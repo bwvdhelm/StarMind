@@ -1,8 +1,22 @@
 <div class="wrapper">
-  <h1 class="dots-and-squares-header">Dot and Squares</h1>
-  <table class="game-board">
-    <tr *ngFor="let row of gameBoardSize">
-      <td *ngFor="let cell of gameBoardSize" (click)="logEvent($event, cell)"></td>
-    </tr>
-  </table>
+  <div class="container">
+    <h1 class="dots-and-squares-header">Dots and Squares</h1>
+    <div class="dots-and-squares-container">
+      <div class="player-information">
+          <h2 class="player1--header" [style.opacity]="currentPlayer === 'player1' ? null : '0.3'">Player 1</h2>
+          <p class="count">{{ player1Count }}</p>
+      </div>
+      <span class="dots-and-squares-table">
+        <span *ngFor="let cell of gameBoardSize; let j = index" class="dots-and-squares-row">
+          <span *ngFor="let cell of gameBoardSize; let i = index;" id="{{i + '-' + j}}" class="dots-and-squares-cell" (click)="clickBorder($event)" 
+          [ngStyle]="styleBorders(i, j)"
+          ></span>
+        </span>
+      </span>
+      <div class="player-information">
+        <h2 class="player2--header" [style.opacity]="currentPlayer === 'player2' ? null : '0.2'">Player 2</h2>
+        <p class="count">{{ player2Count }}</p>
+      </div>
+    </div>
+  </div>
 </div>

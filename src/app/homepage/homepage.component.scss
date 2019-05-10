@@ -1,4 +1,18 @@
+* {
+    // z-index: 1;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.15;
+}
+
 .wrapper {
+    // z-index: 1;
     background-image: linear-gradient(#330033, #1a001a);
     height: 100vh;
     width: 100vw;
