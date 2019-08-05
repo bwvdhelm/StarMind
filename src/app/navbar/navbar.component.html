@@ -1,14 +1,16 @@
-<div class="wrapper">
-  <div class="navbar">
+<nav>
+  <div class="left">
     <a routerLink="home" class="logo">
-      <img class="logo-img" src="assets/logo_white_thick_16.svg" alt="StarMind Logo">
-      <span class="logo-text">STARMIND</span>
+      Vanderhelm
     </a>
-    <ul class="navbar-list">
-      <li><a class="navbar-list__item" routerLink="/projects">Projects</a></li>
-      <li><a class="navbar-list__item" routerLink="/blog">Blog</a></li>
-      <li><a class="navbar-list__item" routerLink="/about">About</a></li>
-      <li><a class="navbar-list__item" routerLink="/contact">Contact</a></li>
+    <button *ngIf="isMobile" (click)="openMenu()"><img src="../../assets/baseline-menu-24px.svg" alt="navigation menu"></button>
+  </div>
+  <div (clickOutside)="showMobileMenu && closeMenu()">
+    <ul *ngIf="!isMobile || showMobileMenu" class="nav-list">
+      <li class="nav-item"><a (click)="closeMenu()" routerLink="/projects">Projects</a></li>
+      <li class="nav-item"><a (click)="closeMenu()" routerLink="/food">Food</a></li>
+      <li class="nav-item"><a (click)="closeMenu()" routerLink="/about">About</a></li>
+      <li class="nav-item"><a (click)="closeMenu()" routerLink="/contact">Contact</a></li>
     </ul>
   </div>
-</div>
+</nav>
