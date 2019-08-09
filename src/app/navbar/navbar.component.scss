@@ -38,6 +38,7 @@ nav {
     }
 
     .nav-item {
+      margin: 0 16px;
       @media screen and (max-width: 480px) {
         height: 36px;
         text-align: center;

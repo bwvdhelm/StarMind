@@ -1,0 +1,25 @@
+<mat-accordion style="margin: 0 auto;">
+  <mat-expansion-panel *ngFor="let day of week.days; let dayIndex = index">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <h1 class="title">{{ day.name }}</h1>
+      </mat-panel-title>
+      <mat-panel-description class="description">
+        <span class="macro">C: {{ day.macros.calories }}</span>
+        <span class="macro">C: {{ day.macros.carbs }}</span>
+        <span class="macro">P: {{ day.macros.protein }}</span>
+        <span class="macro">F: {{ day.macros.fats }}</span>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div class="recipes">
+      <div *ngFor="let recipe of day.recipes; let recipeIndex = index" class="recipe">
+        <div class="recipe-title">
+          <h3>{{ recipe.title }}</h3>
+          <button (click)="removeRecipe(dayIndex, recipe)" type="button">Remove</button>
+        </div>
+        <div class="recipe-image"></div>
+      </div>
+      <button (click)="addRecipe(dayIndex)" type="button">Add</button>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>
