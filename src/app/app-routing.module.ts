@@ -1,15 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FoodComponent } from './food/food.component';
-import { HomepageComponent } from './homepage/homepage.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ProjectsComponent } from './projects/projects.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
+import { LoginComponent } from './components/login/login.component';
+import { MealplannerComponent } from './components/mealplanner/mealplanner.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 const routes: Routes = [
   { path: 'home', component: HomepageComponent },
-  { path: 'projects', component: ProjectsComponent },
-  { path: 'food', component: FoodComponent },
+  { path: 'mealhub', component: MealplannerComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'profile', component: ProfileComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full'},
   { path: '*', component: PageNotFoundComponent }
 ];

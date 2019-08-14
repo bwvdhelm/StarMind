@@ -1,0 +1,6 @@
+{
+  "env": {
+    "MONGO_DB_PW": "BlueBerry2064",
+    "JWT_KEY": "secretkey"
+  }
+}

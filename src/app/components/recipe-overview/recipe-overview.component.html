@@ -1,0 +1,45 @@
+<table mat-table [dataSource]="recipes" class="mat-elevation-z8">
+  <!-- Position Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef>Name</th>
+    <td mat-cell *matCellDef="let recipe">{{ recipe.name }}</td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="calories">
+    <th mat-header-cell *matHeaderCellDef>Calories</th>
+    <td mat-cell *matCellDef="let recipe">{{ recipe.calories }}</td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="carbs">
+    <th mat-header-cell *matHeaderCellDef>Carbs</th>
+    <td mat-cell *matCellDef="let recipe">{{ recipe.carbs }}</td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="protein">
+    <th mat-header-cell *matHeaderCellDef>Protein</th>
+    <td mat-cell *matCellDef="let recipe">{{ recipe.protein }}</td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="fats">
+    <th mat-header-cell *matHeaderCellDef>Fats</th>
+    <td mat-cell *matCellDef="let recipe">{{ recipe.fats }}</td>
+  </ng-container>
+  
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="externalSource">
+    <th mat-header-cell *matHeaderCellDef>External Source</th>
+    <td mat-cell *matCellDef="let recipe"><a href="{{recipe.externalSource}}" color="succes" target="_blank" class="externalSource">Source</a></td>
+  </ng-container>
+
+  <ng-container matColumnDef="delete">
+    <th mat-header-cell *matHeaderCellDef>Actions</th>
+    <td mat-cell *matCellDef="let recipe"><button mat-raised-button color="warn" (click)="deleteRecipe(recipe)">Delete</button></td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>

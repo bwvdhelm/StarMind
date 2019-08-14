@@ -1,0 +1,21 @@
+.wrapper {
+    max-width: 400px;
+    min-width: 300px;
+    margin-top: 64px;
+    border: 1px solid #340552;
+}
+
+::ng-deep .mat-tab-header-pagination {
+    display: none !important;
+}
+
+::ng-deep .mat-tab-label, ::ng-deep .mat-tab-label-active {
+    min-width: 80px !important;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+}

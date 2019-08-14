@@ -1,0 +1,23 @@
+<div [formGroup]="recipeForm" class="form">
+  <mat-form-field>
+    <input matInput placeholder="Name" formControlName="name" type="text" />
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="External source" formControlName="externalSource" type="text" />
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="calories" formControlName="calories" type="text" />
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="carbs" formControlName="carbs" type="text" />
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="protein" formControlName="protein" type="text" />
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="fats" formControlName="fats" type="text" />
+  </mat-form-field>
+  <button mat-raised-button (click)="addRecipe()" cdkFocusInitial>
+    Add recipe
+  </button>
+</div>
