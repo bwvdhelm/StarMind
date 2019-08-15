@@ -22,14 +22,12 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
-              "src/styles.scss",  
+              "src/sass/styles.scss",
+              "src/sass/variables.scss",
               {
-                "input": "src/material-theme.scss"
+                "input": "src/sass/material-theme.scss"
               }
             ],
             "es5BrowserSupport": true
@@ -64,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "StarMind:build"
+            "browserTarget": "Mealhub:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "StarMind:build:production"
+              "browserTarget": "Mealhub:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "StarMind:build"
+            "browserTarget": "Mealhub:build"
           }
         },
         "test": {
@@ -85,31 +83,21 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
-            "styles": [
-              "src/styles.scss"
-            ],
+            "styles": ["src/sass/styles.scss", "src/sass/variables.scss"],
             "scripts": [],
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ]
+            "assets": ["src/favicon.ico", "src/assets"]
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "src/tsconfig.app.json",
-              "src/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["src/tsconfig.app.json", "src/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
     },
-    "StarMind-e2e": {
+    "Mealhub-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -118,11 +106,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "StarMind:serve"
+            "devServerTarget": "Mealhub:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "StarMind:serve:production"
+              "devServerTarget": "Mealhub:serve:production"
             }
           }
         },
@@ -130,13 +118,11 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
     }
   },
-  "defaultProject": "StarMind"
+  "defaultProject": "Mealhub"
 }

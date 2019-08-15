@@ -1,46 +1,48 @@
-<mat-tab-group mat-stretch-tabs mat-align-tabs="center" class="wrapper">
-  <mat-tab label="Login">
-    <div [formGroup]="loginForm" class="form">
-      <mat-form-field>
-        <input matInput placeholder="Email" formControlName="email" type="email" />
-      </mat-form-field>
-      <mat-form-field>
+<div class="wrapper">
+  <mat-tab-group mat-stretch-tabs mat-align-tabs="center" class="container">
+    <mat-tab label="Login" class="tab">
+      <div [formGroup]="loginForm" class="form">
+        <input
+          matInput
+          placeholder="Email"
+          formControlName="email"
+          type="email"
+        />
         <input
           matInput
           placeholder="Password"
           formControlName="password"
           type="password"
         />
-      </mat-form-field>
-      <button mat-raised-button (click)="login()" cdkFocusInitial>
-        Login
-      </button>
-    </div>
-  </mat-tab>
-  <mat-tab label="Register">
-    <div [formGroup]="loginForm" class="form">
-      <mat-form-field>
-        <input matInput placeholder="Email" formControlName="email" type="email" />
-      </mat-form-field>
-      <mat-form-field>
+        <button mat-raised-button (click)="login()" cdkFocusInitial>
+          Login
+        </button>
+      </div>
+    </mat-tab>
+    <mat-tab label="Register">
+      <div [formGroup]="loginForm" class="form">
+        <input
+          matInput
+          placeholder="Email"
+          formControlName="email"
+          type="email"
+        />
         <input
           matInput
           placeholder="Password"
           formControlName="password"
           type="password"
         />
-      </mat-form-field>
-      <mat-form-field>
         <input
           matInput
           placeholder="Confirm password"
           formControlName="password"
           type="password"
         />
-      </mat-form-field>
-      <button mat-raised-button (click)="login()" cdkFocusInitial>
-        Register
-      </button>
-    </div>
-  </mat-tab>
-</mat-tab-group>
+        <button mat-raised-button (click)="login()" cdkFocusInitial>
+          Register
+        </button>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>
