@@ -52,6 +52,7 @@ export class NavbarComponent implements OnInit {
 
   public logout() {
     this.logoutObject = this.accountService.logoutUser();
+    this.closeMenu();
   }
 
 }
