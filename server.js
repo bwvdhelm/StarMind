@@ -13,10 +13,13 @@ const weekRoutes = require('./api/routes/week');
 const recipeRoutes = require('./api/routes/recipe');
 
 // Setup connection to mongoDB
-const uri = "mongodb+srv://bwvdhelm:BlueBerry2064@mealhub-uz0yp.gcp.mongodb.net/mealhub?retryWrites=true&w=majority";
+// const uri = "mongodb+srv://bwvdhelm:BlueBerry2064@mealhub-uz0yp.gcp.mongodb.net/mealhub?retryWrites=true&w=majority";
+const uri = "mongodb://localhost:27017/mealhub"
 // const uri =  "mongodb://bwvdhelm:" + process.env.MONGO_DB_PW + "@mealhub-uz0yp.gcp.mongodb.net/test?retryWrites=true&w=majority";
 mongoose
-  .connect(uri, { useNewUrlParser: true })
+  .connect(uri, { useNewUrlParser: true, dbName: 'mealhub', socketTimeoutMS: 0,
+  keepAlive: true,
+  reconnectTries: 30 })
   .then(res => console.log("succesfully connected"))
   .catch(err => console.log(err));
 mongoose.set("useCreateIndex", true);

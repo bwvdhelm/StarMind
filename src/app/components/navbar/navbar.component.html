@@ -9,8 +9,8 @@
     <ul *ngIf="!isMobile || showMobileMenu" class="nav-list">
       <li class="nav-item"><a (click)="closeMenu()" routerLink="/mealhub">Meal hub</a></li>
       <li *ngIf="isLoggedIn" class="nav-item"><a (click)="closeMenu()" routerLink="/profile">Profile</a></li>
-      <li *ngIf="!isLoggedIn" class="nav-item"><button mat-raised-button (click)="login()" routerLink="/login" role="link">Login</button></li>
-      <li *ngIf="isLoggedIn" class="nav-item"><button mat-raised-button (click)="logout()" routerLink="/home" role="link">Logout</button></li>
+      <li *ngIf="!isLoggedIn" class="nav-item"><button mat-raised-button routerLink="/login" color="primary" (click)="login()" role="link">Login</button></li>
+      <li *ngIf="isLoggedIn" class="nav-item"><button mat-raised-button routerLink="/home" color="primary" (click)="logout()" role="link">Logout</button></li>
     </ul>
   </div>
 </nav>
