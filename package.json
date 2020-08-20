@@ -23,7 +23,7 @@
     "@angular/platform-browser-dynamic": "~8.2.0",
     "@angular/router": "~8.2.0",
     "angular-material-expansion-panel": "^0.7.2",
-    "bcrypt": "^3.0.6",
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
     "core-js": "^2.5.4",
     "cors": "^2.8.5",
